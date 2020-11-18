@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+    <item
+        android:drawable="@color/mainColor"/>
+<!--    아래처럼 쓰면 오류나는 기종 발견-->
+<!--    <item>-->
+<!--        <bitmap-->
+<!--            android:gravity="center"-->
+<!--            android:src="@drawable/ic_loading_test"/>-->
+<!--    </item>-->
+    <item
+        android:gravity="center"
+        android:drawable="@drawable/ic_loading_test"/>
+
+</layer-list>

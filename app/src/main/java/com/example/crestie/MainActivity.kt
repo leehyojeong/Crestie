@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
                         positionOffset,
                         colors[position],
                         colors[position + 1]) as Int)
-//                    Log.d("컬러", colors.toString())
                 }else{
                     viewPager.setBackgroundColor(colors[colors.size - 1])
                 }
