@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 
 class Adapter(): PagerAdapter() {
 
@@ -30,19 +33,22 @@ class Adapter(): PagerAdapter() {
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         layoutInflater = LayoutInflater.from(context)
-        var view:View = layoutInflater.inflate(R.layout.item, container, false)
+        var view:View = layoutInflater.inflate(R.layout.main_card, container, false)
 
         var imageView:ImageView
-        var title:TextView
-        var desc:TextView
+        var nameView:TextView
+        var daysView:TextView
 
-        imageView = view.findViewById(R.id.image)
-        title = view.findViewById(R.id.title)
-        desc = view.findViewById(R.id.desc)
+        imageView = view.findViewById(R.id.mainImage)
+        nameView = view.findViewById(R.id.nameText)
+        daysView = view.findViewById(R.id.dayText)
 
-        imageView.setImageResource(models.get(position).getImage())
-        title.text = models.get(position).getTitle().toString()
-        desc.text = models.get(position).getText().toString()
+        Glide.with(view).load(models.get(position).getImage())
+                .apply(RequestOptions.bitmapTransform(RoundedCorners(40)))
+                .into(imageView)
+//        imageView.setImageResource(models.get(position).getImage())
+        nameView.text = models.get(position).getTitle().toString()
+        daysView.text = models.get(position).getText().toString()
 
         container.addView(view, 0)
 

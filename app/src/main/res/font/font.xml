@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font android:font="@font/neob"/>
+    <font android:font="@font/neoeb"/>
+    <font android:font="@font/neoh"/>
+    <font android:font="@font/neol"/>
+    <font android:font="@font/neom"/>
+    <font android:font="@font/neor"/>
+    <font android:font="@font/neosb"/>
+    <font android:font="@font/neot"/>
+    <font android:font="@font/neoul"/>
+</font-family>
