@@ -15,11 +15,11 @@ class Model {
         return this.image
     }
 
-    fun getTitle(): Any {
+    fun getTitle(): String {
         return this.title
     }
 
-    fun getText(): Any {
+    fun getText(): String {
         return this.desc
     }
 }

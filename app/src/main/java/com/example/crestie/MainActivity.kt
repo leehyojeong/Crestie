@@ -33,13 +33,14 @@ class MainActivity : AppCompatActivity() {
         changeBtn = findViewById(R.id.changeBtn)
         changeBtn.setOnClickListener(View.OnClickListener {
             if(flag){
+                changeBtn.setBackgroundResource(R.drawable.ic_cardchange)
                 supportFragmentManager.beginTransaction().replace(R.id.frameLayout,cardFragment).commit()
                 flag=false
             }else{
+                changeBtn.setBackgroundResource(R.drawable.ic_slidechange)
                 supportFragmentManager.beginTransaction().replace(R.id.frameLayout,slideFragment).commit()
                 flag=true
             }
         })
-
     }
 }
